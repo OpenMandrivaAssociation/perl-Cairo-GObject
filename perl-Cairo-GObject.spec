@@ -25,7 +25,6 @@ BuildRequires:	perl(Glib) >= 1.224.0
 BuildRequires:	perl-devel
 BuildRequires:	cairo-devel
 BuildRequires:	gcc
-BuildRequires:	gcc-c++
 
 %description
 Integrate Cairo into the Glib type system.
@@ -34,12 +33,10 @@ Integrate Cairo into the Glib type system.
 %autosetup -n %{modname}-%{modver} -p1
 
 %build
-export CC=gcc
-export CXX=g++
 
-perl Makefile.PL INSTALLDIRS=vendor CC=gcc CXX=g++
+perl Makefile.PL INSTALLDIRS=vendor CC=gcc
 
-%make_build
+%make_build CC=gcc
 
 %check
 #make test
