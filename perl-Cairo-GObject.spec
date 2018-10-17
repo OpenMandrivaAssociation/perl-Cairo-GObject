@@ -37,7 +37,7 @@ Integrate Cairo into the Glib type system.
 export CC=gcc
 export CXX=g++
 
-perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor CC=gcc CXX=g++
 
 %make_build
 
