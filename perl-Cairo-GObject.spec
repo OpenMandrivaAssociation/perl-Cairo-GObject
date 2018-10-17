@@ -4,8 +4,8 @@
 %define _disable_lto 1
 
 # keep only versionated requires:
-%global __requires_exclude %__requires_exclude|^perl\\(Cairo\\)$
-%global __requires_exclude %__requires_exclude|^perl\\(Glib\\)$
+%global __requires_exclude ^perl\\(Cairo\\)$
+%global __requires_exclude ^perl\\(Glib\\)$
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
