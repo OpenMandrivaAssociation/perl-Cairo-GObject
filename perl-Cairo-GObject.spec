@@ -1,5 +1,7 @@
 %define	modname	Cairo-GObject
 %define	modver	1.004
+%define _disable_ld_no_undefined 1
+%define _disable_lto 1
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
@@ -23,18 +25,18 @@ BuildRequires:	cairo-devel
 Integrate Cairo into the Glib type system.
 
 %prep
-%setup -q -n %{modname}-%{modver}
+%autosetup -n %{modname}-%{modver} -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
 
-%make
+%make_build
 
 %check
 #make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc LICENSE META.json META.yml MYMETA.yml NEWS README examples
