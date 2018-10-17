@@ -48,6 +48,6 @@ perl Makefile.PL INSTALLDIRS=vendor CC=gcc CXX=g++
 %make_install
 
 %files
-%doc LICENSE META.json META.yml MYMETA.yml NEWS README examples
+%doc LICENSE META.json META.yml NEWS README examples
 %{_mandir}/man3/*
-%{perl_vendorlib}/*
+%{perl_vendorarch}/*
