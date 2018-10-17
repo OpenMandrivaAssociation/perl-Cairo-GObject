@@ -33,8 +33,8 @@ Integrate Cairo into the Glib type system.
 %autosetup -n %{modname}-%{modver} -p1
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor CC=gcc LD=ld
-%make_build CC=gcc LD=ld
+perl Makefile.PL INSTALLDIRS=vendor CC=gcc LD=gcc
+%make_build CC=gcc LD=gcc
 
 %check
 #make test
