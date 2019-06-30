@@ -9,7 +9,7 @@
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	8
+Release:	9
 
 Summary:	Integrate Cairo into the Glib type system
 License:	LGPLv2
