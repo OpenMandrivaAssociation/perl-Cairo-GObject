@@ -1,5 +1,5 @@
 %define	modname	Cairo-GObject
-%define	modver	1.004
+%define	modver	1.005
 %define _disable_ld_no_undefined 1
 %define _disable_lto 1
 
@@ -9,7 +9,7 @@
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	9
+Release:	1
 
 Summary:	Integrate Cairo into the Glib type system
 License:	LGPLv2
@@ -35,9 +35,6 @@ Integrate Cairo into the Glib type system.
 %build
 perl Makefile.PL INSTALLDIRS=vendor CC=gcc LD=gcc
 %make_build CC=gcc LD=gcc
-
-%check
-#make test
 
 %install
 %make_install
