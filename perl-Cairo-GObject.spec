@@ -14,7 +14,7 @@ Release:	4
 Summary:	Integrate Cairo into the Glib type system
 License:	LGPLv2
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Cairo/%{modname}-%{modver}.tar.gz
 
 BuildRequires:	perl(Cairo) >= 1.80.0
