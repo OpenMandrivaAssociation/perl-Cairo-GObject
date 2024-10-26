@@ -1,27 +1,26 @@
 %define	modname	Cairo-GObject
-%define	modver	1.005
 %define _disable_ld_no_undefined 1
 %define _disable_lto 1
 
-# keep only versionated requires:
+# keep only versioned requires:
 %global __requires_exclude ^perl\\(Cairo\\)$
 %global __requires_exclude ^perl\\(Glib\\)$
 
 Name:		perl-%{modname}
-Version:	%{perl_convert_version %{modver}}
-Release:	5
+Version:	1.005
+Release:	1
 
 Summary:	Integrate Cairo into the Glib type system
 License:	LGPLv2
 Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Cairo/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Cairo/%{modname}-%{version}.tar.gz
 
-BuildRequires:	perl(Cairo) >= 1.80.0
-BuildRequires:	perl(ExtUtils::Depends) >= 0.200.0
+BuildRequires:	perl(Cairo)
+BuildRequires:	perl(ExtUtils::Depends)
 BuildRequires:	perl(ExtUtils::MakeMaker)
-BuildRequires:	perl(ExtUtils::PkgConfig) >= 1.0.0
-BuildRequires:	perl(Glib) >= 1.224.0
+BuildRequires:	perl(ExtUtils::PkgConfig)
+BuildRequires:	perl(Glib)
 BuildRequires:	perl-devel
 BuildRequires:	cairo-devel
 BuildRequires:	gcc
@@ -30,11 +29,11 @@ BuildRequires:	gcc
 Integrate Cairo into the Glib type system.
 
 %prep
-%autosetup -n %{modname}-%{modver} -p1
+%autosetup -n %{modname}-%{version} -p1
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor CC=gcc LD=gcc
-%make_build CC=gcc LD=gcc
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %install
 %make_install
