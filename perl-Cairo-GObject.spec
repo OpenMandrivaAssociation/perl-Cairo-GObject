@@ -8,7 +8,7 @@
 
 Name:		perl-%{modname}
 Version:	1.005
-Release:	1
+Release:	2
 
 Summary:	Integrate Cairo into the Glib type system
 License:	LGPLv2
