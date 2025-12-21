@@ -16,6 +16,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Cairo/%{modname}-%{version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl(Cairo)
 BuildRequires:	perl(ExtUtils::Depends)
 BuildRequires:	perl(ExtUtils::MakeMaker)
